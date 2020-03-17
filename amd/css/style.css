@@ -1,0 +1,167 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+  padding: 5%;
+}
+
+.logo {
+  max-width: 150px;
+}
+
+.about_logo {
+  max-width: 100px;
+}
+
+nav > img {
+  padding-right: 7%;
+}
+
+.menu {
+  float: right;
+  margin-right: 15%;
+}
+
+.menu_link {
+  text-decoration: none;
+  color: black;
+  background: transparent;
+  margin: 20px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+figure {
+  position: relative;
+  margin: 0;
+}
+
+figure > figcaption {
+  background: rgba(249, 0, 52, 0.39);
+  color: white;
+  margin-top: -50px;
+  padding: 10px;
+  position: absolute;
+  display: block;
+  width: 100%;
+}
+
+.banner img{
+  width: 100%;
+}
+
+figcaption span a {
+  float: right;
+}
+
+aside {
+  max-width: 35%;
+  background: #F90034;
+  color: white;
+}
+
+article {
+  display: flex;
+  border-bottom: 2px solid #F90034;
+}
+
+.article-text {
+  flex: 2;
+}
+
+.about {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+aside h2 {
+  text-align: center;
+}
+
+h2 > img {
+  max-width: 35px;
+}
+
+.about header {
+  flex: auto;
+  margin: 10px;
+}
+
+.about header h2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.about header h2 img {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about span {
+  flex: auto;
+  display: flex;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.about span * {
+  flex: auto;
+}
+
+.triangle-bot {
+    width: 0;
+    height: 0;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-bottom: 0 solid transparent;
+    border-top: 16px solid #F90034;
+    margin: auto;
+}
+
+.triangle-right {
+    width: 0;
+    height: 0;
+    border-bottom: 2px solid transparent;
+    border-top: 2px solid transparent;
+    border-right: 0 solid transparent;
+    border-left: 4px solid white;
+    margin: 10px;
+}
+
+.bot {
+  max-width: 70px;
+}
+
+.social_icon {
+  max-width: 40px;
+}
+
+.button_col {
+  background: #F90034;
+  color: white;
+  padding: 5px;
+}
+
+footer {
+  display: flex;
+}
+
+.tab {
+  flex: auto;
+
+}
+
+.tab span {
+  display: flex;
+}
+
+.tab span * {
+  flex: auto;
+}
+
+.tab h3 {
+  text-align: center;
+}
