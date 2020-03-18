@@ -50,7 +50,6 @@ function createGrid($pieces, $cellSize)
     $isWhite = !$isWhite;
   }
 
-  // Close table and add style
   $grid .= "
     <style type='text/css'>
       * {
