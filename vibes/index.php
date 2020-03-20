@@ -23,7 +23,7 @@
     <p>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem coronavirus ullam officia esse perspiciatis dolorem repudiandae.
     </p>
-    <a href="#" class="border-button-inv caps">READ MORE</a>
+    <a href="#" class="border-button caps">READ MORE</a>
   </section>
 
   <section id="description" class="chunk">
@@ -38,17 +38,17 @@
     <article class="split3">
       <h2>What you get?</h2>
       <div class="img-title-text">
-        <img src="images/todo.png" alt="">
+        <img src="images/splash.png" alt="">
         <h3 class="caps">COLORFUL & COMPACT</h3>
         Je ne sais plus ce que je dois écrire
       </div>
       <div class="img-title-text">
-        <img src="images/todo.png" alt="">
+        <img src="images/splash.png" alt="">
         <h3 class="caps">RAPIDE & PAS CHER</h3>
         Je ne sais plus ce que je dois écrire
       </div>
       <div class="img-title-text">
-        <img src="images/todo.png" alt="">
+        <img src="images/splash.png" alt="">
         <h3 class="caps">BEAVIS & BUTTHEAD</h3>
         Je ne sais plus ce que je dois écrire
       </div>
@@ -66,12 +66,12 @@
   <?php echo testimonials(3); ?>
 
   <section class="banner">
-    <h1 class="caps">NEW HORIZONS AWAIT</h1>
+    <h1 class="caps center">NEW HORIZONS AWAIT</h1>
     <div class="underline center"></div>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem coronavirus ullam officia esse perspiciatis dolorem repudiandae.
     </p>
-    <a href="#" class="border-button-inv caps">BUY VIBES THEME</a>
+    <a href="#" class="border-button caps">BUY VIBES THEME</a>
   </section>
 
   <section id="contact" class="chunk">
@@ -91,7 +91,8 @@
         <label for="name" class="caps">subject</label>
         <input type="text" name="subject" value="">
         <label for="name" class="caps">message <span class="colored">*</span></label>
-        <textarea name="Text1" cols="40" rows="5"></textarea>
+        <textarea name="Text1" cols="40" rows="3"></textarea>
+        <input type="button" value="Envoyer">
       </div>
     </form>
   </section>
@@ -119,7 +120,7 @@
         VIBES contains fully working MailChimp subscribe form.
       </p>
       <input type="text" name="email" value="Your Email Adress">
-      <a href="#" class="border-button-inv caps">SUBSCRIBE</a>
+      <a href="#" class="border-button caps">SUBSCRIBE</a>
     </div>
 
     <div class="split3">

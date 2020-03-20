@@ -1,6 +1,6 @@
 <?php
 
 $logo = "images/logo.png";
-$nav = ["todo", "todo", "todo", "todo", "todo", "todo"];
+$nav = ["home", "about", "portfolio", "testimonials", "contact", "pages"];
 
 ?>

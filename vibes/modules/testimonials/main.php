@@ -16,8 +16,10 @@ function testimonials($count) {
       <div class='testimonial'>
         <div class='".($left ? "left" : "right")."'>
           <img src='$imgs[$i]' alt=''>
-          <p>$texts[$i]</p>
-          $names[$i]
+          <div>
+            <p>$texts[$i]</p>
+            <h5>$names[$i]</h5>
+          </div>
         </div>
       </div>
     ";

@@ -20,3 +20,7 @@
 .img-border.color1 { border-color: #C0B850; }
 .img-border.color2 { border-color: #549C2D; }
 .img-border.color3 { border-color: #7D86E1; }
+
+#thumbnails-nav {
+  margin: 30px;
+}
