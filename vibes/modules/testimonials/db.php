@@ -1,10 +1,10 @@
 <?php
 
 $imgs = [
-  "images/todo.png",
-  "images/todo.png",
-  "images/todo.png",
-  "images/todo.png",
+  "images/profile_pic.png",
+  "images/profile_pic.png",
+  "images/profile_pic.png",
+  "images/profile_pic.png",
 ];
 
 $texts = [

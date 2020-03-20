@@ -91,7 +91,7 @@
         <label for="name" class="caps">subject</label>
         <input type="text" name="subject" value="">
         <label for="name" class="caps">message <span class="colored">*</span></label>
-        <input type="text" name="message" value="">
+        <textarea name="Text1" cols="40" rows="5"></textarea>
       </div>
     </form>
   </section>
@@ -100,7 +100,7 @@
 
 <footer>
 
-  <section id="about" class="chunk">
+  <section id="about" class="">
     <div class="split3">
       <h2 class="caps">ABOUT VIBES</h2>
       <div class="underline"></div>

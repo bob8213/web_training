@@ -6,21 +6,16 @@ function gallery($rows) {
 
   $imgElements = "";
   for ($i=0; $i < $rows * 4; $i++) {
-    $imgElements .= "<img src='$imgs[$i]' alt='' class='thumbnail'>";
+    $color = 'color'.(random_int(0, 3));
+    $imgElements .= "<img src='$imgs[$i]' alt='' class='thumbnail img-border $color'>";
   }
 
   $gallery = "
-  <section id='gallery' class='chunk'>
+  <section id='gallery' class='banner'>
     <div id='thumbnails'>
       $imgElements
     </div>
     <div id='thumbnails-nav'>
-      <span class=''>
-        <a href='#' class='gallery-link caps selected'>ALL</a>
-        <a href='#' class='gallery-link caps'>AUDIO</a>
-        <a href='#' class='gallery-link caps'>IMAGE</a>
-        <a href='#' class='gallery-link caps'>VIDEO</a>
-      </span>
       <a href='#' class='border-button caps'>LOAD MORE</a>
     </div>
   </section>
