@@ -10,7 +10,18 @@
   <?php include 'modules.php' ?>
 </head>
 
-<body>
+<body onload="onLoad()">
+
+<div id="load" style="
+  background: #dce8fb;
+  width:      100%;
+  height:     100%;
+  z-index:    10;
+  top:        0;
+  left:       0;
+  position:   fixed;
+"></div>
+
 <div id="wrapper">
 
   <header id="main-header">
@@ -132,6 +143,13 @@
 </footer>
 
 </div>
+
+<script type="text/javascript">
+  function onLoad() {
+    document.getElementById("load").remove();
+  }
+</script>
+
 </body>
 
 </html>
