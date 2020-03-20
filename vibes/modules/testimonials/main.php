@@ -2,7 +2,7 @@
 
 function testimonials($count) {
   //Since there's no actual database.
-  include 'modules/testimonials/db.php';
+  include dirname(__FILE__).'/db.php';
 
   $testimonials = '
   <section id="testimonials" class="chunk">

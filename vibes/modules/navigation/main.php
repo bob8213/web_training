@@ -2,7 +2,7 @@
 
 function navigation() {
   //Since there's no actual database.
-  include 'modules/navigation/db.php';
+  include dirname(__FILE__).'/db.php';
 
   $navigation = "<nav>
     <img src='$logo' alt='' id='logo'>

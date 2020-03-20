@@ -61,27 +61,7 @@
     </article>
   </section>
 
-  <section id="gallery" class="chunk">
-    <div id="thumbnails">
-      <img src="images/todo.png" alt="" class="thumbnail">
-      <img src="images/todo.png" alt="" class="thumbnail">
-      <img src="images/todo.png" alt="" class="thumbnail">
-      <img src="images/todo.png" alt="" class="thumbnail">
-      <img src="images/todo.png" alt="" class="thumbnail">
-      <img src="images/todo.png" alt="" class="thumbnail">
-      <img src="images/todo.png" alt="" class="thumbnail">
-      <img src="images/todo.png" alt="" class="thumbnail">
-    </div>
-    <div id="thumbnails-nav">
-      <span class="">
-        <a href="#" class="nav-link small caps selected">ALL</a>
-        <a href="#" class="nav-link small caps">AUDIO</a>
-        <a href="#" class="nav-link small caps">IMAGE</a>
-        <a href="#" class="nav-link small caps">VIDEO</a>
-      </span>
-      <a href="#" class="border-button caps">LOAD MORE</a>
-    </div>
-  </section>
+  <?php echo gallery(2); ?>
 
   <?php echo testimonials(3); ?>
 

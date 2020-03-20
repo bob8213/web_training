@@ -1,0 +1,12 @@
+
+#thumbnails {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.thumbnail {
+  flex: 0 0 25%;
+  max-width: 25%;
+}

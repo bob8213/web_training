@@ -1,0 +1,38 @@
+<?php
+
+$imgs = [
+  "images/todo.png",
+  "images/todo.png",
+  "images/todo.png",
+  "images/todo.png",
+  "images/todo.png",
+  "images/todo.png",
+  "images/todo.png",
+  "images/todo.png",
+  "images/todo.png",
+  "images/todo.png",
+  "images/todo.png",
+  "images/todo.png",
+  "images/todo.png",
+  "images/todo.png",
+  "images/todo.png",
+  "images/todo.png",
+  "images/todo.png",
+  "images/todo.png",
+  "images/todo.png",
+  "images/todo.png",
+  "images/todo.png",
+  "images/todo.png",
+  "images/todo.png",
+  "images/todo.png",
+  "images/todo.png",
+  "images/todo.png",
+  "images/todo.png",
+  "images/todo.png",
+  "images/todo.png",
+  "images/todo.png",
+  "images/todo.png",
+  "images/todo.png",
+];
+
+?>
