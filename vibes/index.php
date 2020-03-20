@@ -14,16 +14,15 @@
 <div id="wrapper">
 
   <header id="main-header">
-    <?php echo navigation(
-      "images/good.jpg",
-      "todo", "todo", "todo", "todo", "todo", "todo"
-    ); ?>
+    <?php echo navigation(); ?>
   </header>
 
 <main>
   <section class="banner">
     <h1 class="caps">HTML TEMPLATE FOR CREATIVE FOLKS AND DESIGN AGENCIES</h1>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem coronavirus ullam officia esse perspiciatis dolorem repudiandae.
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem coronavirus ullam officia esse perspiciatis dolorem repudiandae.
+    </p>
     <a href="#" class="border-button-inv caps">READ MORE</a>
   </section>
 
@@ -56,7 +55,9 @@
     </article>
 
     <article class="split3">
-      TODO
+      <?php
+        echo accordion();
+      ?>
     </article>
   </section>
 
@@ -87,15 +88,32 @@
   <section class="banner">
     <h1 class="caps">NEW HORIZONS AWAIT</h1>
     <div class="underline center"></div>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem coronavirus ullam officia esse perspiciatis dolorem repudiandae.
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem coronavirus ullam officia esse perspiciatis dolorem repudiandae.
+    </p>
     <a href="#" class="border-button-inv caps">BUY VIBES THEME</a>
   </section>
 
   <section id="contact" class="chunk">
     <h1 class="caps center">GET IN TOUCH</h1>
     <div class="underline center"></div>
-    <!-- FORM -->
-    <p>TODO</p>
+    <form id="contact-form" action="index.html" method="post">
+      <div id="contact-info">
+        <label for="name" class="caps">your name <span class="colored">*</span></label>
+        <input type="text" name="name" value="">
+        <label for="name" class="caps">your email <span class="colored">*</span></label>
+        <input type="text" name="email" value="">
+        <label for="name" class="caps">your phone</label>
+        <input type="text" name="phone" value="">
+      </div>
+
+      <div id="contact-message">
+        <label for="name" class="caps">subject</label>
+        <input type="text" name="subject" value="">
+        <label for="name" class="caps">message <span class="colored">*</span></label>
+        <input type="text" name="message" value="">
+      </div>
+    </form>
   </section>
 
 </main>

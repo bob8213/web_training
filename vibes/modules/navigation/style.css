@@ -1,0 +1,13 @@
+
+nav span {
+  float: right;
+  margin: 50px 0 50px 0;
+}
+
+.nav-link {
+  color: white;
+  background: transparent;
+  margin: 20px;
+  font-weight: bold;
+  font-size: 18px;
+}

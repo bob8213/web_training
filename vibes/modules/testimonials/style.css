@@ -1,0 +1,16 @@
+
+.testimonial {
+  padding: 30px 0 30px 0;
+}
+
+.testimonial img {
+  max-width: 60px;
+}
+
+.left , .right {
+  display: flex;
+}
+
+.right {
+  flex-direction: row-reverse;
+}

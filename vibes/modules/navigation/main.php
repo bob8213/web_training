@@ -1,6 +1,9 @@
 <?php
 
-function navigation($logo, ...$nav) {
+function navigation() {
+  //Since there's no actual database.
+  include 'modules/navigation/db.php';
+
   $navigation = "<nav>
     <img src='$logo' alt='' id='logo'>
     <span>
@@ -11,6 +14,10 @@ function navigation($logo, ...$nav) {
   $navigation .= "
     </span>
   </nav>";
+
+  $navigation .= '
+    <link rel="stylesheet" type="text/css" title="Cool stylesheet" href="modules/navigation/style.css">
+  ';
 
   return $navigation;
 }

@@ -17,7 +17,10 @@
   border-bottom: 3px solid red;
 }
 
-/* =============================== */
+.colored {
+  background: transparent;
+  color: red;
+}
 
 body {
   background: #daa58c;
@@ -36,11 +39,6 @@ body {
   color: white;
 }
 
-nav span {
-  float: right;
-  margin: 50px 0 50px 0;
-}
-
 #logo {
   max-width: 200px;
 }
@@ -49,19 +47,16 @@ a {
   text-decoration: none;
 }
 
-.nav-link {
-  color: white;
-  background: transparent;
-  margin: 20px;
-  font-weight: bold;
-  font-size: 18px;
-}
 
 .banner {
   background: #9c7bb3;
   color: white;
   text-align: center;
   padding: 60px 80px 60px 80px;
+}
+
+.border-button {
+  border: 2 solid #ca7989;
 }
 
 .chunk {
@@ -97,6 +92,17 @@ a {
 .thumbnail {
   flex: 0 0 25%;
   max-width: 25%;
+}
+
+#contact-form {
+  display: flex;
+}
+
+#contact-message, #contact-info {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  min-width: 40%;
 }
 
 #about {
