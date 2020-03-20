@@ -18,7 +18,7 @@ function testimonials($count) {
           <img src='$imgs[$i]' alt=''>
           <div>
             <p>$texts[$i]</p>
-            <h5>$names[$i]</h5>
+            <strong>$names[$i]</strong>
           </div>
         </div>
       </div>

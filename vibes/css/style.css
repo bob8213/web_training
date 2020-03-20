@@ -15,6 +15,7 @@
 .underline {
   max-width: 60px;
   border-bottom: 3px solid red;
+  padding-top: 8px; 
 }
 
 .colored {

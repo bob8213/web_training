@@ -8,7 +8,7 @@ function accordion() {
 
   foreach ($sections as $title => $text) {
     $accordion .= "
-      <button class='accordion'>$title</button>
+      <button class='accordion'><strong>$title</strong></button>
       <div class='panel'>
         <p>$text</p>
       </div>

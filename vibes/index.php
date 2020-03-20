@@ -39,17 +39,17 @@
       <h2>What you get?</h2>
       <div class="img-title-text">
         <img src="images/splash.png" alt="">
-        <h3 class="caps">COLORFUL & COMPACT</h3>
+        <h5 class="caps">COLORFUL & COMPACT</h5>
         Je ne sais plus ce que je dois écrire
       </div>
       <div class="img-title-text">
         <img src="images/splash.png" alt="">
-        <h3 class="caps">RAPIDE & PAS CHER</h3>
+        <h5 class="caps">RAPIDE & PAS CHER</h5>
         Je ne sais plus ce que je dois écrire
       </div>
       <div class="img-title-text">
         <img src="images/splash.png" alt="">
-        <h3 class="caps">BEAVIS & BUTTHEAD</h3>
+        <h5 class="caps">BEAVIS & BUTTHEAD</h5>
         Je ne sais plus ce que je dois écrire
       </div>
     </article>
