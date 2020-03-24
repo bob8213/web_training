@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vibes</title>
+  <link rel="stylesheet" type="text/css" title="Cool stylesheet" href="css/style.css">
+</head>
+
+<body onload="createGrid()">
+  <div id="wrapper">
+
+    <div id="game">
+      <div id="player1" class="playing">
+        <h3>Joueur 1</h3>
+        <span>Symbole: <img src="#" alt="" class="symbol-icon" id="symbol-icon1"></span>
+        <h1 id="winner1" class="hidden">Gagné !</h1>
+      </div>
+      <div id="grid"></div>
+      <div id="player2">
+        <h3>Joueur 2</h3>
+        <span>Symbole: <img src="#" alt="" class="symbol-icon" id="symbol-icon2"></span>
+        <h1 id="winner2" class="hidden">Gagné !</h1>
+      </div>
+    </div>
+
+    <div id="game-over" class="hidden">
+      La partie est terminée.
+      <button type="button" name="replay" onclick="replay()">Rejouer</button>
+    </div>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

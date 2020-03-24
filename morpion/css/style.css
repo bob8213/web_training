@@ -1,0 +1,58 @@
+
+* {
+    box-sizing: border-box;
+}
+
+#game {
+  display: flex;
+  border: 1px solid black;
+}
+
+#player1, #player2 {
+  text-align: center;
+  margin: 0 auto 0 auto;
+  padding: 0 100px 0 100px;
+}
+
+.playing {
+  background: green;
+  color: white;
+}
+
+#grid {
+  display: flex;
+  margin: auto;
+  width: 300px;
+  height: 300px;
+  flex-wrap: wrap;
+}
+
+.cell {
+  min-width: 50px;
+  min-height: 50px;
+  flex: 0 0 33%;
+  border: 1px solid black;
+}
+
+.symbol-icon {
+  max-width: 30px;
+  max-height: 30px;
+}
+
+.symbol {
+  max-width: 50%;
+  max-height: 50%;
+}
+
+.hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
