@@ -14,10 +14,10 @@ function displayFields(...$inputs) {
   $f = '';
   foreach ($inputs as $input) {
     $low = strtolower($input);
-    $f .= '<div>
+    $f .= '<form>
       <label for="'.$low.'">'.$input.'</label>
       <input type="text" value="'.$low.'"></input>
-    </div>';
+    </form>';
   }
   return $f;
 }

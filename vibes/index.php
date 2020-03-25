@@ -6,8 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vibes</title>
   <link rel="stylesheet" type="text/css" title="Cool stylesheet" href="css/style.css">
-
-  <?php include 'modules.php' ?>
+  <?php include 'modules.php'; ?>
 </head>
 
 <body onload="onLoad()">

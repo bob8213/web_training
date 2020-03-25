@@ -29,10 +29,6 @@ function testimonials($count) {
 
   $testimonials .= "</section>";
 
-  $testimonials .= '
-    <link rel="stylesheet" type="text/css" title="Cool stylesheet" href="modules/testimonials/style.css">
-  ';
-
   return $testimonials;
 }
 

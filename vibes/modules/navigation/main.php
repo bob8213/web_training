@@ -17,10 +17,6 @@ function navigation() {
     </span>
   </nav>";
 
-  $navigation .= '
-    <link rel="stylesheet" type="text/css" title="Cool stylesheet" href="modules/navigation/style.css">
-  ';
-
   return $navigation;
 }
 

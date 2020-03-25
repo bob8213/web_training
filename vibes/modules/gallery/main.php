@@ -21,10 +21,6 @@ function gallery($rows) {
   </section>
   ";
 
-  $gallery .= '
-    <link rel="stylesheet" type="text/css" title="Cool stylesheet" href="modules/gallery/style.css">
-  ';
-
   return $gallery;
 }
 

@@ -14,7 +14,7 @@ function displayTable($capitales) {
   ksort($capitales);
   foreach ($capitales as $capitale => $city) {
     $rows .= '<tr>'.
-      '<td>'.strtoupper($capitale).'</td>'.
+      '<td>'.mb_strtoupper($capitale).'</td>'.
       '<td>'.$city.'</td>'.
     '</tr>';
   }

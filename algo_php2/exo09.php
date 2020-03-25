@@ -7,7 +7,7 @@ $array = [
   "Mademoiselle",
 ];
 
-function displayCheckBoxes($array) {
+function displayRadios($array) {
   $boxes = '';
   foreach ($array as $item) {
     $low = strtolower($item);
