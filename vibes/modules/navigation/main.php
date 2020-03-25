@@ -9,7 +9,9 @@ function navigation() {
     <span>
     ";
 
-  foreach ($nav as $link) $navigation .= "<a href='#' class='nav-link caps'>$link</a>";
+  for ($i=0; $i < count($nav); $i++) {
+    $navigation .= "<a href='#$links[$i]' class='nav-link caps'>$nav[$i]</a>";
+  }
 
   $navigation .= "
     </span>
