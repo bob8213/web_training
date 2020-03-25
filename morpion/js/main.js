@@ -18,7 +18,7 @@ var symbol = [
 var count = 0;
 
 function createGrid() {
-  element = document.getElementById("grid");
+  var element = document.getElementById("grid");
 
   var html = "";
   for (var i = 0; i < 3; i++) {
@@ -33,9 +33,9 @@ function createGrid() {
 
   element.innerHTML = html;
 
-  icon = document.getElementById("symbol-icon1");
+  var icon = document.getElementById("symbol-icon1");
   icon.setAttribute("src", symbol[0]);
-  icon = document.getElementById("symbol-icon2");
+  var icon = document.getElementById("symbol-icon2");
   icon.setAttribute("src", symbol[1]);
 }
 
@@ -44,28 +44,28 @@ function play(x, y, id) {
   if (grid[x][y] == Cell.NONE && !done) grid[x][y] = turn;
   else return;
 
-  element = document.getElementById(id);
+  var element = document.getElementById(id);
   element.innerHTML = "<img src='"+ symbol[turn-1] +"' alt='' class='symbol'>";
 
   if (checkLines(turn, x, y)) {
     done = true;
-    winner = document.getElementById("winner"+turn);
+    var winner = document.getElementById("winner"+turn);
     winner.classList.remove("hidden");
   }
 
   // Show replay button
   if (++count >= 9 || done) {
-    gameOver = document.getElementById("game-over");
+    var gameOver = document.getElementById("game-over");
     gameOver.classList.remove("hidden");
     return
   }
 
   // Highlight the current player
-  player = document.getElementById("player"+turn);
+  var player = document.getElementById("player"+turn);
   player.classList.remove("playing");
   if (turn == Cell.PLAYER_ONE) turn = Cell.PLAYER_TWO;
   else if (turn == Cell.PLAYER_TWO) turn = Cell.PLAYER_ONE;
-  player = document.getElementById("player"+turn);
+  var player = document.getElementById("player"+turn);
   player.classList.add("playing");
 }
 
@@ -108,18 +108,18 @@ function replay() {
     }
   }
 
-  winner = document.getElementById("winner"+turn);
+  var winner = document.getElementById("winner"+turn);
   winner.classList.add("hidden");
 
   turn = Cell.PLAYER_ONE;
   count = 0;
   done = false;
 
-  player = document.getElementById("player1");
+  var player = document.getElementById("player1");
   player.classList.add("playing");
-  player = document.getElementById("player2");
+  var player = document.getElementById("player2");
   player.classList.remove("playing");
 
-  gameOver = document.getElementById("game-over");
+  var gameOver = document.getElementById("game-over");
   gameOver.classList.add("hidden");
 }
