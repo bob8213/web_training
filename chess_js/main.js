@@ -32,7 +32,6 @@ function loadChess() {
           else if (index < 16) src = blackPawn;
           else if (index >= 48 && index < 56) src = whitePawn;
           else src = whiteRow[index-56];
-          console.log(src);
 
           img.src = "images/"+src+".png";
           img.classList.add("piece");
