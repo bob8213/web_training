@@ -35,13 +35,15 @@ class Film {
     $this->director = $director;
   }
 
-  function __tostring() {
-    $actorsStr = implode($this->actors, "<br>");
+  function __tostring() { return "$this->title"; }
+
+  function fullDescription() {
+    $actors = implode($this->actors, "<br>");
     return "
       $this->title ($this->release) - Durée : $this->length - Genre $this->genre<br>
       Synopsis : $this->synopsis<br>
       Acteurs : <br>
-      $actorsStr<br>
+      $actors<br>
       Réalisateur : <br>
       $this->director
     ";
