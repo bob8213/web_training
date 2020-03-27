@@ -19,18 +19,17 @@ class Client {
     $lastName,
     $dob,
     $city,
-    $accounts
   ) {
     $this->firstName = $firstName;
     $this->lastName = $lastName;
     $this->dob = $dob;
     $this->city = $city;
-    $this->accounts = $accounts;
+    $this->accounts = [];
   }
 
   function __tostring() {
     $age = $this->age();
-    $acc = implode($this->accounts);
+    $acc = implode($this->accounts, '<br>');
     return "$this->firstName $this->lastName ($age ans) à $this->city : <br>$acc<br>";
   }
 

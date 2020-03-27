@@ -14,7 +14,7 @@
 include 'account.php';
 include 'client.php';
 
-$client = new Client("John", "Kevin", "20-07-1987", "Paris", []);
+$client = new Client("John", "Kevin", "20-07-1987", "Paris");
 $client->addAccount(new Account("Compte courant", 0.56, "euros", $client));
 $client->addAccount(new Account("Livret A", 5000, "dallars", $client));
 

@@ -26,7 +26,7 @@ class Account {
   function __tostring() {
     $fn = $this->client->getFirstName();
     $ln = $this->client->getLastName();
-    return "$this->label de $fn $ln - solde : $this->balance $this->currency<br>";
+    return "$this->label de $fn $ln - solde : $this->balance $this->currency";
   }
 
   function credit($sum) {
