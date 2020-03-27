@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-image: url("images/background.jpg");
+  background-size: 300px;
+}
+
+#wrapper {
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+
+#chess {
+  width: 85%;
+  height: 85%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  background-image: url("images/board.jpg");
+  background-size: 100%;
+}
+
+.cell {
+  width: 12.5%;
+  height: 12.5%;
+  flex: 0 0 12.5%;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+}
+
+.white {
+  background: rgba(226, 205, 148, 0.5);
+  color: inherit;
+}
+
+.black {
+  background: rgba(132, 103, 26, 0.5);
+  color: inherit;
+}
+
+.piece {
+  width: 70%;
+  height: 70%;
+  margin: auto;
+}
+
+.piece:hover {
+  filter:
+    drop-shadow(3px 0 0 rgba(197, 197, 255, 0.8))
+    drop-shadow(-3px 0 rgba(197, 197, 255, 0.8))
+    drop-shadow(0 3px 0 rgba(197, 197, 255, 0.8))
+    drop-shadow(0 -3px rgba(197, 197, 255, 0.8))
+}
