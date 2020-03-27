@@ -1,0 +1,3 @@
+hello_wasm/target/*
+!hello_wasm/target/deploy
+*.lock
