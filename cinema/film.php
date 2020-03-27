@@ -4,9 +4,9 @@ class Film {
   private $title;
   private $release;
   private $length;
+  private $genre;
   private $synopsis;
   private $director;
-  private $genre;
   private $actors;
 
   function getTitle() { return $this->title; }
@@ -14,8 +14,8 @@ class Film {
   function getLength() { return $this->length; }
   function getGenre() { return $this->genre; }
   function getSynopsis() { return $this->synopsis; }
-  function getActors() { return $this->actors; }
   function getDirector() { return $this->director; }
+  function getActors() { return $this->actors; }
 
   function __construct(
     $title,
@@ -23,16 +23,16 @@ class Film {
     $length,
     $genre,
     $synopsis,
-    $actors,
-    $director
+    $director,
+    $actors
   ) {
     $this->title = $title;
     $this->release = $release;
     $this->length = $length;
     $this->genre = $genre;
     $this->synopsis = $synopsis;
-    $this->actors = $actors;
     $this->director = $director;
+    $this->actors = $actors;
   }
 
   function __tostring() { return "$this->title"; }
@@ -40,11 +40,11 @@ class Film {
   function fullDescription() {
     $actors = implode($this->actors, "<br>");
     return "
-      $this->title ($this->release) - Durée : $this->length - Genre $this->genre<br>
+      <strong>$this->title</strong> ($this->release) - Durée : $this->length - Genre $this->genre<br>
       Synopsis : $this->synopsis<br>
-      Acteurs : <br>
+      <strong>Acteurs : </strong><br>
       $actors<br>
-      Réalisateur : <br>
+      <strong>Réalisateur :  </strong><br>
       $this->director
     ";
   }

@@ -1,7 +1,5 @@
 <?php
 
-require_once 'film_abstract.php';
-
 class Role extends FilmAbstract{
   private $name;
   private $actors = [];
@@ -14,7 +12,7 @@ class Role extends FilmAbstract{
     return $this->name;
   }
 
-  function getActors() { return $this->roles; }
+  function getActors() { return $this->actors; }
 
   function addActor($actor) {
     array_push($this->actors, $actor);

@@ -1,7 +1,5 @@
 <?php
 
-require_once 'film_abstract.php';
-
 abstract class FilmWorkerAbstract extends FilmAbstract{
   private $firstName;
   private $lastName;
