@@ -18,7 +18,7 @@ class Client {
     $firstName,
     $lastName,
     $dob,
-    $city,
+    $city
   ) {
     $this->firstName = $firstName;
     $this->lastName = $lastName;
