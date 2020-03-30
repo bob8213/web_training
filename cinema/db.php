@@ -1,6 +1,6 @@
 <?php
 
-class Db {
+class Db implements iDisplay {
   private $actors = [];
   private $directors = [];
   private $genres = [];
@@ -44,33 +44,33 @@ class Db {
     ";
   }
 
-  function fullDescription() {
-    $description = "<strong>DESCRIPTIONS DES REALISATEURS</strong><br>";
+  function display() {
+    $description = "<strong>AFFICHAGE DES REALISATEURS</strong><br>";
     foreach ($this->directors as $director) {
       $films = implode($director->getFilms(), '<br>');
       $description .= "<br><strong>$director</strong><br>$films<br>";
     }
-    $description .= "<br><strong>DESCRIPTIONS DES ACTEURS</strong><br>";
+    $description .= "<br><strong>AFFICHAGE DES ACTEURS</strong><br>";
     foreach ($this->actors as $actor) {
       $films = implode($actor->getFilms(), '<br>');
       $description .= "<br><strong>$actor</strong><br>$films<br>";
     }
-    $description .= "<br><strong>DESCRIPTIONS DES GENRES</strong><br>";
+    $description .= "<br><strong>AFFICHAGE DES GENRES</strong><br>";
     foreach ($this->genres as $genre) {
       $films = implode($genre->getFilms(), '<br>');
       $description .= "<br><strong>$genre</strong><br>$films<br>";
     }
-    $description .= "<br><strong>DESCRIPTIONS DES ROLES D'UN ACTEUR</strong><br>";
+    $description .= "<br><strong>AFFICHAGE DES ROLES D'UN ACTEUR</strong><br>";
     foreach ($this->actors as $actor) {
       $roles = implode($actor->getRoles(), '<br>');
       $description .= "<br><strong>$actor</strong><br>$roles<br>";
     }
-    $description .= "<br><strong>DESCRIPTIONS DES FILMS</strong><br>";
+    $description .= "<br><strong>AFFICHAGE DES FILMS</strong><br>";
     foreach ($this->films as $film) {
-      $filmDesc = $film->fullDescription();
+      $filmDesc = $film->display();
       $description .= "<br>$filmDesc<br><br>";
     }
-    $description .= "<br><strong>DESCRIPTIONS DES ACTEURS D'UN ROLE</strong><br>";
+    $description .= "<br><strong>AFFICHAGE DES ACTEURS D'UN ROLE</strong><br>";
     foreach ($this->roles as $role) {
       $actors = implode($role->getActors(), '<br>');
       $description .= "<br><strong>$role</strong><br>$actors<br>";
@@ -81,6 +81,7 @@ class Db {
   function addActor($actor) { array_push($this->actors, $actor); }
   function addDirector($director) { array_push($this->directors, $director); }
   function addGenre($genre) { array_push($this->genres, $genre); }
+  function addRole($role) { array_push($this->roles, $role); }
   function addFilm(
     $title,
     $release,
@@ -88,19 +89,15 @@ class Db {
     $genre,
     $synopsis,
     $director,
-    $roleActorKVPs
+    $roleActors
   ) {
     $actors = [];
-    foreach ($roleActorKVPs as $roleName => $actor) {
+    foreach ($roleActors as $roleActor) {
+      $role = $roleActor[0];
+      $actor = $roleActor[1];
       array_push($actors, $actor);
-      $role = array_search($roleName, $this->roles);
-      if ($role != false) {
-        $role = $this->roles[$role];
-      }else{
-        $role = new Role($roleName);
-        array_push($this->roles, $role);
-      }
       $actor->addRole($role);
+      $role->addActor($actor);
     }
     $film = new Film($title, $release, $length, $genre, $synopsis, $director, $actors);
     array_push($this->films, $film);
@@ -109,7 +106,6 @@ class Db {
     $genre->addFilm($film);
     foreach ($actors as $actor) {
       $actor->addFilm($film);
-      $role->addActor($actor);
     }
   }
 

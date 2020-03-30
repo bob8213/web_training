@@ -1,6 +1,6 @@
 <?php
 
-class Film {
+class Film implements iDisplay {
   private $title;
   private $release;
   private $length;
@@ -37,7 +37,7 @@ class Film {
 
   function __tostring() { return "$this->title"; }
 
-  function fullDescription() {
+  function display() {
     $actors = implode($this->actors, "<br>");
     return "
       <strong>$this->title</strong> ($this->release) - Durée : $this->length - Genre $this->genre<br>

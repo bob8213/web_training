@@ -11,6 +11,8 @@
 
 <?php
 
+require_once 'display.php';
+
 require_once 'film_abstract.php';
 require_once 'film_worker_abstract.php';
 
@@ -35,28 +37,39 @@ $db->addDirector(new Director("Tristan", "hmhmhm", "21-04-854"));
 $db->addGenre(new Genre("Genre1"));
 $db->addGenre(new Genre("Genre2"));
 
+$db->addRole(new Role("Role1"));
+$db->addRole(new Role("Role2"));
+$db->addRole(new Role("Role3"));
+$db->addRole(new Role("Role4"));
+
 $db->addFilm(
   "Film1", "02-05-2018", "01:20", $db->getGenre(0), "blbbblb1", $db->getDirector(0),
-  ["Role1" => $db->getActor(0), "Role2" => $db->getActor(2), "Role3" => $db->getActor(3)]
+  [
+    [$db->getRole(0), $db->getActor(0)],
+    [$db->getRole(2), $db->getActor(2)],
+    [$db->getRole(2), $db->getActor(3)]
+  ]
 );
 
 $db->addFilm(
   "Film2", "02-05-2017", "01:20", $db->getGenre(1), "blbbblb2", $db->getDirector(1),
-  ["Role4" => $db->getActor(0), "Role3" => $db->getActor(1)]
+  [
+    [$db->getRole(3), $db->getActor(0)],
+    [$db->getRole(2), $db->getActor(1)]
+  ]
 );
 
 $db->addFilm(
   "Film3", "02-05-2010", "01:20", $db->getGenre(0), "blbbblb3", $db->getDirector(0),
-  ["Role2" => $db->getActor(1), "Role4" => $db->getActor(2)]
+  [
+    [$db->getRole(1), $db->getActor(1)],
+    [$db->getRole(3), $db->getActor(2)]
+  ]
 );
 
 echo $db;
 echo "<br><br>=======================================<br><br>";
-echo $db->fullDescription();
-
-// TODO fix roles
-// remove hardcorded stuf in Db
-// display interface
+echo $db->display();
 
 ?>
 
