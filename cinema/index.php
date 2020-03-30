@@ -1,14 +1,3 @@
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cinema</title>
-</head>
-
-<body>
-
 <?php
 
 require_once 'display.php';
@@ -67,10 +56,23 @@ $db->addFilm(
   ]
 );
 
+?>
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cinema</title>
+</head>
+
+<body>
+
+<?php
 echo $db;
 echo "<br><br>=======================================<br><br>";
 echo $db->display();
-
 ?>
 
 </body>
