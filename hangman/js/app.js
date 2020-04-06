@@ -108,11 +108,11 @@ async function play() {
   playing = true;
 
   audio.play();
-  console.log("play")
 
   let load = document.getElementById("load");
   load.style.opacity = 0;
   await sleep(1000);
+  load.remove();
 }
 
 function fromTemplate(element) {
@@ -133,7 +133,7 @@ function input(input) {
 
   if (isNaN(input)) {
     //Input comes from a button
-    sendInput(input);
+    sendInput(input.toUpperCase());
   }else {
     //Input is a keyCode
     let value = String.fromCharCode(input);
@@ -209,12 +209,9 @@ function sendInput(value) {
         setTries(response.tryCount);
         setLetterButtons();
       }else{
-        audio.pause();
-        audio.currentTime = 0;
-        let load = document.getElementById("load");
-        load.style.opacity = 1;
         playing = false;
         gameOver = true;
+        play();
       }
     }else {
       setTries(response.tryCount);
