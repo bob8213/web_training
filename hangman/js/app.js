@@ -29,8 +29,6 @@ var yes;
 var yay;
 const audioVolume = .3;
 
-//TODO fix audio pause error
-
 function load() {
   audio = new Audio("data/mop.mp3");
   click = new Audio("data/click.wav");
